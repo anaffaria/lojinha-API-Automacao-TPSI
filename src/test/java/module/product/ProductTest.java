@@ -4,8 +4,14 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pojo.ComponentPojo;
+import pojo.ProductPojo;
+import pojo.UserPojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 
@@ -20,13 +26,14 @@ public class ProductTest {
         basePath = "/lojinha";
         //Caso necessario informar a porta utilize port: 8080 por exemplo
 
+        UserPojo user = new UserPojo();
+        user.setUsuarioLogin("admin");
+        user.setUsuarioSenha("admin");
+
         //Obter o token do usuario admin
         this.token = given()
                 .contentType(ContentType.JSON)
-                .body("{\n" +
-                        "  \"usuarioLogin\": \"admin\",\n" +
-                        "  \"usuarioSenha\": \"admin\"\n" +
-                        "}")
+                .body(user)
             .when()
                 .post("/v2/login")
             .then()
@@ -38,31 +45,43 @@ public class ProductTest {
     @DisplayName("Validar que o valor do produto igual a 0.00 nao e permitido")
     public void testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct(){
 
-        //Tentar inserir um produto com valor 0.00 e validar que a mensagem de erro foi apresentada e o status code retornado foi 422
+        ProductPojo product = new ProductPojo();
+        product.setProdutoNome("Playstation 5");
+        product.setProdutoValor(0.00);
 
+        List<String> cores = new ArrayList<>();
+        cores.add("preto");
+        cores.add("branco");
+
+        product.setProdutoCores(cores);
+        product.setProdutoUrlMock("");
+
+        List<ComponentPojo> componentes = new ArrayList<>();
+
+        ComponentPojo primeiroComponente = new ComponentPojo();
+        primeiroComponente.setComponenteNome("Controle");
+        primeiroComponente.setComponenteQuantidade(1);
+        componentes.add(primeiroComponente);
+
+        ComponentPojo segundoComponente = new ComponentPojo();
+        segundoComponente.setComponenteNome("Cabo");
+        segundoComponente.setComponenteQuantidade(2);
+        componentes.add(segundoComponente);
+
+        product.setComponentes(componentes);
+
+        //Tentar inserir um produto com valor 0.00 e validar que a mensagem de erro foi apresentada e o status code retornado foi 422
         given()
                 .contentType(ContentType.JSON)
                 .header("token", this.token)
-                .body("{\n" +
-                        "  \"produtoNome\": \"Playstation 5\",\n" +
-                        "  \"produtoValor\": 0.00,\n" +
-                        "  \"produtoCores\": [\n" +
-                        "    \"preto\"\n" +
-                        "  ],\n" +
-                        "  \"produtoUrlMock\": \"\",\n" +
-                        "  \"componentes\": [\n" +
-                        "    {\n" +
-                        "      \"componenteNome\": \"Controle\",\n" +
-                        "      \"componenteQuantidade\": 1\n" +
-                        "    }\n" +
-                        "  ]\n" +
-                        "}")
+                .body(product)
         .when()
                 .post("/v2/produtos")
         .then()
                 .assertThat()
                 .body("error", equalTo("O valor do produto deve estar entre R$ 0,01 e R$ 7.000,00"))
                 .statusCode(422);
+
     }
 
     @Test

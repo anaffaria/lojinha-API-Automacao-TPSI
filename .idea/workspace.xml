@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6839190-08a4-42dc-a1f1-ef61d40e0233" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/ComponentPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/ProductPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/UserPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/module/product/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module/product/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2J91Susm9h74Yj9wzC9Euy0IJ1s" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,7 +52,7 @@
       <recent name="C:\Users\ana\IdeaProjects\lojinhaAPIAutomacao\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductTest">
+  <component name="RunManager" selected="JUnit.ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct">
     <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lojinhaAPIAutomacao" />
       <extension name="coverage">
@@ -64,6 +64,22 @@
       <option name="PACKAGE_NAME" value="module.product" />
       <option name="MAIN_CLASS_NAME" value="module.product.ProductTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lojinhaAPIAutomacao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="module.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="module.product" />
+      <option name="MAIN_CLASS_NAME" value="module.product.ProductTest" />
+      <option name="METHOD_NAME" value="testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct" />
         <item itemvalue="JUnit.ProductTest" />
         <item itemvalue="JUnit.ProductTest.testValidateTheProhibitedLimitsOfTheValueofTheProduct" />
       </list>
@@ -100,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671475492832</updated>
       <workItem from="1671475494904" duration="2359000" />
-      <workItem from="1671557545819" duration="1480000" />
+      <workItem from="1671557545819" duration="4007000" />
     </task>
     <servers />
   </component>
