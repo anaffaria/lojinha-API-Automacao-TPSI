@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6839190-08a4-42dc-a1f1-ef61d40e0233" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/ComponentPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/ProductPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/UserPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataFactory/ProductDataFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataFactory/UserDataFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/module/product/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module/product/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,7 @@
       <recent name="C:\Users\ana\IdeaProjects\lojinhaAPIAutomacao\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct">
+  <component name="RunManager" selected="JUnit.ProductTest">
     <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lojinhaAPIAutomacao" />
       <extension name="coverage">
@@ -102,8 +100,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct" />
         <item itemvalue="JUnit.ProductTest" />
+        <item itemvalue="JUnit.ProductTest.testValidateThatValuesLowerThanAllowedCannotBeEnteredInTheProduct" />
         <item itemvalue="JUnit.ProductTest.testValidateTheProhibitedLimitsOfTheValueofTheProduct" />
       </list>
     </recent_temporary>
@@ -117,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671475492832</updated>
       <workItem from="1671475494904" duration="2359000" />
-      <workItem from="1671557545819" duration="4007000" />
+      <workItem from="1671557545819" duration="5763000" />
     </task>
     <servers />
   </component>
